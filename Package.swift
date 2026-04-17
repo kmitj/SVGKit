@@ -1,10 +1,10 @@
-// swift-tools-version:5.3
+// swift-tools-version6.0
 import PackageDescription
 
 let package = Package(
     name: "SVGKit",
     platforms: [
-        .macOS(.v10_10),
+        .macOS(.v10_13),
         .iOS(.v13),
         .tvOS(.v13)
     ],
@@ -19,7 +19,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/CocoaLumberjack/CocoaLumberjack.git", .upToNextMajor(from: "3.7.0"))
+        .package(url: "https://github.com/CocoaLumberjack/CocoaLumberjack.git", exact: .init(stringLiteral: "3.9.0"))
     ],
     targets: [
         .target(
